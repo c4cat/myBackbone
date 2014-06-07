@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>simple_save</title>
+</head>
+<body>
+	
+
+
+	<script src="../../test/vendor/json2.js"></script>
+  	<script src="../../test/vendor/jquery.js"></script>
+  	<script src="../../test/vendor/underscore.js"></script>
+  	<script src="../../backbone.js"></script>
+  	<script src="../backbone.localStorage.js"></script>
+  	<script>
+  		$(function(){
+  			var Save = Backbone.Model.extend({
+  				default: function(){
+  					console.log('Sample save!');
+  				},
+  			});
+
+  			var SaveView = Backbone.View.extend({
+  				initialize: function(){
+  					console.log('this is save view');
+  				},
+  				template: _.template($('#save-tem').html()),
+  				events:{
+
+  				}
+  			})
+
+  			var saveView = new SaveView;
+
+  		});
+  	</script>
+  	<script type="text/template" id="save-tem">
+</body>
+</html>
